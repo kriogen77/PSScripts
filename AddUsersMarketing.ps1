@@ -31,4 +31,21 @@ Import-Csv $csvFilePath | ForEach-Object {
                -ChangePasswordAtLogon $false
 
     Add-ADGroupMember -Identity $groupDN -Members $username
+
+    # Create home folder path
+    $HomeFolder = "C:\Shares\Marketing\" + $username
+
+    if ((Test-Path "$HomeFolder") -eq $false) {
+        $NewFolder = New-Item -Path $HomeFolder -Name $username -ItemType "Directory"
+
+        $ACL = Get-Acl -Path $HomeFolder
+        $ACLRule = New-Object System.Security.AccessControl.FileSystemAccessRule($username,'FullControl','ContainerInherit,ObjectInherit','None','Allow')
+        try {
+            $ACL.AddAccessRule($ACLRule)
+            }
+            catch {
+                Write-Warning "Error"
+            }
+            Set-Acl -Path $HomeFolder -AclObject $ACL
+    }
 }
