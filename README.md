@@ -14,9 +14,8 @@ If you have a PowerShell script that you would like to contribute to this reposi
 Here are some of the scripts included in this repository:
 
 - AD.ps1: A script for create new domain.
-* Check-SystemHealth.ps1: A script to check the health of a Windows system.
-+ Cleanup-TempFiles.ps1: A script to clean up temporary files on a Windows system.
-- Get-InstalledSoftware.ps1: A script to list all installed software on a Windows system.
-* Restart-Service.ps1: A script to restart a Windows service.
-+ Set-ProxySettings.ps1: A script to set proxy settings for a Windows system.
-- Update-Windows.ps1: A script to update a Windows system.
+* AddUsersIT.ps1: A script to add new users under organizational unit or group.
++ ADStructure.ps1: A script to create main structure of organization.
+- FileService.ps1: A script to create shares and add give/remove access rights to users to see documents.
+* Firewall.ps1: A script to add/remove firewall rules.
++ Update.ps1: A script to update a Windows system.
