@@ -13,10 +13,10 @@ If you have a PowerShell script that you would like to contribute to this reposi
 ### Scripts
 Here are some of the scripts included in this repository:
 
-Backup-File.ps1: A script to create backups of files.
-Check-SystemHealth.ps1: A script to check the health of a Windows system.
-Cleanup-TempFiles.ps1: A script to clean up temporary files on a Windows system.
-Get-InstalledSoftware.ps1: A script to list all installed software on a Windows system.
-Restart-Service.ps1: A script to restart a Windows service.
-Set-ProxySettings.ps1: A script to set proxy settings for a Windows system.
-Update-Windows.ps1: A script to update a Windows system.
+- Backup-File.ps1: A script to create backups of files.
+* Check-SystemHealth.ps1: A script to check the health of a Windows system.
++ Cleanup-TempFiles.ps1: A script to clean up temporary files on a Windows system.
+- Get-InstalledSoftware.ps1: A script to list all installed software on a Windows system.
+* Restart-Service.ps1: A script to restart a Windows service.
++ Set-ProxySettings.ps1: A script to set proxy settings for a Windows system.
+- Update-Windows.ps1: A script to update a Windows system.
