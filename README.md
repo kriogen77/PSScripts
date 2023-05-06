@@ -13,7 +13,7 @@ If you have a PowerShell script that you would like to contribute to this reposi
 ### Scripts
 Here are some of the scripts included in this repository:
 
-- Backup-File.ps1: A script to create backups of files.
+- AD.ps1: A script for create new domain.
 * Check-SystemHealth.ps1: A script to check the health of a Windows system.
 + Cleanup-TempFiles.ps1: A script to clean up temporary files on a Windows system.
 - Get-InstalledSoftware.ps1: A script to list all installed software on a Windows system.
