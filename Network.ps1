@@ -1,3 +1,7 @@
+<#
+    Disables DHCP and changes the IP address to static.
+#>
+
 Set-NetIPInterface -InterfaceAlias "Ethernet" -Dhcp Disabled
 
 Write-Host "Please below assign your network parameters"

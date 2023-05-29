@@ -1,3 +1,7 @@
+<#
+    Creates shared folders for departments and provides access rights to appropriate emplyees.
+#>
+
 Install-WindowsFeature -Name File-Services
 
 New-Item -ItemType Directory -Path C:\Shares\IT

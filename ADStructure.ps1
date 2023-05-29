@@ -1,4 +1,8 @@
-﻿$numOUs = Read-Host "How many OUs do you want to create?"
+﻿<#
+    Create user's structure in Active Directory.
+#>
+
+$numOUs = Read-Host "How many OUs do you want to create?"
 
 for ($i = 1; $i -le $numOUs; $i++) {
     $name = Read-Host "Enter the name for OU #$i"

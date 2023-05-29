@@ -1,3 +1,7 @@
+<#
+    Installs all or specific Windows Updates.
+#>
+
 Install-Module -Name PSWindowsUpdate
 Get-WindowsUpdate
 

@@ -1,4 +1,7 @@
-﻿
+﻿<#
+    Creates a firewall rule that it is allowed remote desktop connections and enables sharing files and printers with other devices on the network.
+#>
+
 $RuleName = "My Custom Firewall Rule"
 
 

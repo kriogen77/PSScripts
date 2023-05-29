@@ -1,4 +1,8 @@
-﻿Install-WindowsFeature -Name DNS -IncludeManagementTools
+﻿<#
+    Install DNS Windows feature, configures DNS address, creates DNS zone and replication scope "Forest"
+#>
+
+Install-WindowsFeature -Name DNS -IncludeManagementTools
 
 $dnsServerIPAddress = "8.8.8.8"
 Set-DnsClientServerAddress -InterfaceIndex 5 -ServerAddresses $dnsServerIPAddress

@@ -1,4 +1,9 @@
-﻿# Set the path to the CSV file
+﻿<#
+    Add new users from CSV file to Active Directory.
+#>
+
+
+# Set the path to the CSV file
 $csvFilePath = "C:\users.csv"
 
 # Set the distinguished name of the IT Administrators group
@@ -26,6 +31,9 @@ Import-Csv $csvFilePath | ForEach-Object {
         return
     }
 
+    
+
+
     # Create the new user account in Active Directory
     $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
     New-ADUser -Name "$firstName $lastName" `
@@ -41,10 +49,11 @@ Import-Csv $csvFilePath | ForEach-Object {
     Add-ADGroupMember -Identity $groupDN -Members $username
 
     # Create home folder path
-    $HomeFolder = "C:\Shares\IT\" + $username
+    $HomeFolder = "\\WINSRV\Shares\IT\" + $username
+
 
     if ((Test-Path "$HomeFolder") -eq $false) {
-        $NewFolder = New-Item -Path $HomeFolder -Name $username -ItemType "Directory"
+        $NewFolder = New-Item -Path $HomeFolder -ItemType "Directory"
 
         $ACL = Get-Acl -Path $HomeFolder
         $ACLRule = New-Object System.Security.AccessControl.FileSystemAccessRule($username,'FullControl','ContainerInherit,ObjectInherit','None','Allow')
@@ -54,6 +63,6 @@ Import-Csv $csvFilePath | ForEach-Object {
             catch {
                 Write-Warning "Error"
             }
-            Set-Acl -Path $HomeFolder -AclObject $ACL
+         Set-Acl -Path $HomeFolder -AclObject $ACL
     }
 }

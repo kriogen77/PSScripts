@@ -1,4 +1,9 @@
-﻿# Set the path to the CSV file
+﻿<#
+    Add new users from CSV file to Active Directory.
+#>
+
+
+# Set the path to the CSV file
 $csvFilePath = "C:\users_a.csv"
 
 # Set the distinguished name of the Inside Sales group

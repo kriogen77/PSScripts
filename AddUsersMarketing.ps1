@@ -1,4 +1,8 @@
-﻿$csvFilePath = "C:\users_b.csv"
+﻿<#
+    Add new users from CSV file to Active Directory.
+#>
+
+$csvFilePath = "C:\users_b.csv"
 
 $digitalMarketingGroupDN = "CN=Digital Marketing,OU=Marketing,OU=London,OU=Company LTD,DC=test,DC=local"
 
