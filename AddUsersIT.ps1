@@ -1,5 +1,9 @@
 ﻿<#
-    Add new users from CSV file to Active Directory.
+    .DESCRIPTION
+    Add users from CSV file, add to group and create home directory.
+
+    .HOW TO USE
+    Prepare CSV file with users and needed information about them and than run script.
 #>
 
 

@@ -1,6 +1,11 @@
 <#
+    .DESCRIPTION
     Disables DHCP and changes the IP address to static.
+
+    .HOW TO USE
+    Enter your or your organization's network data and prepare server for job in the network
 #>
+
 
 Set-NetIPInterface -InterfaceAlias "Ethernet" -Dhcp Disabled
 

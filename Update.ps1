@@ -1,5 +1,9 @@
 <#
-    Installs all or specific Windows Updates.
+    .DESCRIPTION
+    Install all or specific Windows Updates
+
+    .HOW TO USE
+    From list of updates choose either update to intall or install all updates
 #>
 
 Install-Module -Name PSWindowsUpdate

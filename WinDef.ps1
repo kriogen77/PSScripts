@@ -1,5 +1,9 @@
 ﻿<#
+    .DESCRIPTION
     Enables Windows Defender
+
+    .HOW TO USE
+    Configure preferences for Windows Defender scans and updates
 #>
 
 Add-WindowsCapability -Online -Name "Windows-Defender"

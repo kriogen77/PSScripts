@@ -1,6 +1,11 @@
 ﻿<#
-    Creates a firewall rule that it is allowed remote desktop connections and enables sharing files and printers with other devices on the network.
+    .DESCRIPTION
+    Creates a firewall rule that it is allowed incoming connections to port number and protocol.
+
+    .HOW TO USE
+    Choose port number and protocol to allow connections and
 #>
+
 
 $RuleName = "My Custom Firewall Rule"
 

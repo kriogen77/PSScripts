@@ -9,13 +9,3 @@ To use a script, simply download the script from the repository and execute it i
 
 ### Contributing
 If you have a PowerShell script that you would like to contribute to this repository, please feel free to open a pull request. All contributions are welcome and will be reviewed by the repository maintainers.
-
-### Scripts
-Here are some of the scripts included in this repository:
-
-- AD.ps1: A script for create new domain.
-* AddUsersIT.ps1: A script to add new users under organizational unit or group.
-+ ADStructure.ps1: A script to create main structure of organization.
-- FileService.ps1: A script to create shares and add give/remove access rights to users to see documents.
-* Firewall.ps1: A script to add/remove firewall rules.
-+ Update.ps1: A script to update a Windows system.

@@ -1,5 +1,9 @@
 ﻿<#
-    Add new users from CSV file to Active Directory.
+    .DESCRIPTION
+    Add users from CSV file, add to group and create home directory.
+
+    .HOW TO USE
+    Prepare CSV file with users and needed information about them and than run script.
 #>
 
 $csvFilePath = "C:\users_b.csv"
@@ -37,10 +41,10 @@ Import-Csv $csvFilePath | ForEach-Object {
     Add-ADGroupMember -Identity $groupDN -Members $username
 
     # Create home folder path
-    $HomeFolder = "C:\Shares\Marketing\" + $username
+    $HomeFolder = "\\WINSRV\Shares\Marketing\" + $username
 
     if ((Test-Path "$HomeFolder") -eq $false) {
-        $NewFolder = New-Item -Path $HomeFolder -Name $username -ItemType "Directory"
+        $NewFolder = New-Item -Path $HomeFolder -ItemType "Directory"
 
         $ACL = Get-Acl -Path $HomeFolder
         $ACLRule = New-Object System.Security.AccessControl.FileSystemAccessRule($username,'FullControl','ContainerInherit,ObjectInherit','None','Allow')

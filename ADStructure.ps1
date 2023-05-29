@@ -1,5 +1,9 @@
 ﻿<#
-    Create user's structure in Active Directory.
+    .DESCRIPTION
+    Create structure of organizational units, groups and users in Active Directiry.
+
+    .HOW TO USE
+    You can choose how many OUs or gruops will be added, its names and categories and then create one specifying the path.
 #>
 
 $numOUs = Read-Host "How many OUs do you want to create?"

@@ -1,5 +1,9 @@
 ﻿<#
-    Sets the wallpaper of all company's users.
+    .DESCRIPTION
+    Sets the wallpaper to all company's users
+
+    .HOW TO USE
+    Chhose image or photo for background for all users and reboot your workstation 
 #>
 
 $ou = "OU=Company LTD,DC=test,DC=local"
@@ -13,7 +17,7 @@ foreach ($user in $users) {
 }
 
 gpupdate /force
-$c = Read-Host "Do you want to restart PC now?" (y/n)
+$c = Read-Host "Do you want to restart PC now? (y/n)"
 if ($c -eq "y"){
 Restart-Computer -ComputerName "WINSRV" -Force
 }

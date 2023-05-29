@@ -1,6 +1,11 @@
 ﻿<#
+    .DESCRIPTION
     Install DNS Windows feature, configures DNS address, creates DNS zone and replication scope "Forest"
+
+    .HOW TO USE
+    All values can be changed depending on organization's needs.
 #>
+
 
 Install-WindowsFeature -Name DNS -IncludeManagementTools
 

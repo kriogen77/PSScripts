@@ -1,5 +1,9 @@
 <#
-    Creates shared folders for departments and provides access rights to appropriate emplyees.
+    .DESCRIPTION
+    Creates shared folders for different departments
+
+    .HOW TO USE
+    Access rights can be configured with different FileSystemAccessRule values.
 #>
 
 Install-WindowsFeature -Name File-Services
