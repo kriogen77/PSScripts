@@ -36,12 +36,14 @@ Import-Csv $csvFilePath | ForEach-Object {
                -AccountPassword $securePassword `
                -Enabled $true `
                -Path "OU=Marketing,OU=London,OU=Company LTD,DC=test,DC=local" `
-               -ChangePasswordAtLogon $false
+               -ChangePasswordAtLogon $false `
+               -HomeDrive "D:" `
+               -homeDirectory "\\WINSRV\Shares\IT\homefolders\$($user.username)"
 
     Add-ADGroupMember -Identity $groupDN -Members $username
 
     # Create home folder path
-    $HomeFolder = "\\WINSRV\Shares\Marketing\" + $username
+    $HomeFolder = "\\WINSRV\Shares\Marketing\homefolders\" + $username
 
     if ((Test-Path "$HomeFolder") -eq $false) {
         $NewFolder = New-Item -Path $HomeFolder -ItemType "Directory"
